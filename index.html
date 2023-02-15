@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script type="text/javascript">
+    var  aluno, n1, n2, n3, media;
+
+    aluno = prompt(" Informe o nome do aluno");
+
+    n1 = prompt(" Informe a nota 1");
+    n1 = eval(n1);
+
+    n2 = prompt(" Informe a nota 2");
+    n2 = eval(n2);
+
+    n3 = prompt(" Informe a nota 3 ");
+    n3 = eval(n3);
+    
+    media = (n1 + n2 + n3) /3;
+    
+    if (media >= 6) {
+        document.write(aluno, " sua média é " + media, " parabéns, você foi APROVADO");
+     }
+
+    else { 
+        if (media <= 5) {
+            document.write(aluno, " sua média é " + media, " parabéns, você foi REPROVADO");
+        }
+        else { 
+            document.write(aluno, " sua média é " + media, "  parabéns, você esta de RECUPERAÇÃO");
+        }
+    }
+
+    </script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Média dos alunos</title>
+</head>
+<body>
+    <h1>Média alunos</h1>
+
+    
+</body>
+</html>

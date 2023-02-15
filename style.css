@@ -1,0 +1,10 @@
+* {
+    border:
+    padding: 0;
+
+}
+
+body {
+    background-image: url(img/material-escolar-em-fundo-branco_122104-1104.avif);
+    background-size: cover;
+}
