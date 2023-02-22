@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <script type="text/javascript">
-    var  aluno, n1, n2, n3, media;
+<div id="resultado"></div>
+
+<script type="text/javascript">
+    var aluno, n1, n2, n3, media;
 
     aluno = prompt(" Informe o nome do aluno");
 
@@ -15,31 +14,25 @@
     n3 = prompt(" Informe a nota 3 ");
     n3 = eval(n3);
     
-    media = (n1 + n2 + n3) /3;
+    media = (n1 + n2 + n3) / 3;
     
+    var resultado = document.getElementById("resultado");
+    resultado.innerHTML = aluno + " sua média é " + media;
+    resultado.classList.add("mensagem");
+
     if (media >= 6) {
-        document.write(aluno, " sua média é " + media, " parabéns, você foi APROVADO");
-     }
-
-    else { 
-        if (media <= 5) {
-            document.write(aluno, " sua média é " + media, " parabéns, você foi REPROVADO");
-        }
-        else { 
-            document.write(aluno, " sua média é " + media, "  parabéns, você esta de RECUPERAÇÃO");
-        }
+        resultado.innerHTML += " parabéns, você foi APROVADO";
+    } else if (media <= 5) {
+        resultado.innerHTML += " parabéns, você foi REPROVADO";
+    } else {
+        resultado.innerHTML += " parabéns, você está de RECUPERAÇÃO";
     }
+</script>
 
-    </script>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Média dos alunos</title>
-</head>
-<body>
-    <h1>Média alunos</h1>
-
-    
-</body>
-</html>
+<style>
+  .mensagem {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+  }
+</style>
