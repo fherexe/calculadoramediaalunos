@@ -1,14 +1,17 @@
-* {
-    border:
-    padding: 0;
-
+:root {
+    --color1:#fff;
+    --color2:#fff;
+    --color3:#fff;
+    --color4:#fff;
 }
 
 body {
-    background-image: url(img/material-escolar-em-fundo-branco_122104-1104.avif);
     background-size: cover;
-}
-
-#resultado {
-    font: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: aqua ;
+    font-size: 6vh;
 }

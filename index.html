@@ -1,38 +1,45 @@
-<div id="resultado"></div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script type="text/javascript">
+        var nome, n1, n2, n3, media;
 
-<script type="text/javascript">
-    var aluno, n1, n2, n3, media;
+        name=prompt("Informe seu nome");
 
-    aluno = prompt(" Informe o nome do aluno");
+        n1 = prompt("Informe a nota da primeira prova");
+        n1 = eval(n1);
 
-    n1 = prompt(" Informe a nota 1");
-    n1 = eval(n1);
+        n2 = prompt("Informe a nota da segunda prova");
+        n2 = eval(n2);
 
-    n2 = prompt(" Informe a nota 2");
-    n2 = eval(n2);
+        n3 = prompt("Informe a nota da terceira prova");
+        n3 = eval(n3);
 
-    n3 = prompt(" Informe a nota 3 ");
-    n3 = eval(n3);
+        media = (n1 + n2 + n3) / 3;
+
+        if (media >= 6) {
+            document.write( name ," esta com a média: ", media, " ✔"); document.body.style.color = "green";
+        }
+
+        else {
+            if (media <= 5) {
+                document.write(name ," esta reprovado com a média: ", media, " ❌"); document.body.style.color = "red";
+            }
+            else {
+                document.write(name ," esta de recuperação com a média: ", media, " 👨‍🏫"); document.body.style.color = "silver";
+            }
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Calculara de Média</title>
+</head>
+<body>
     
-    media = (n1 + n2 + n3) / 3;
-    
-    var resultado = document.getElementById("resultado");
-    resultado.innerHTML = aluno + " sua média é " + media;
-    resultado.classList.add("mensagem");
-
-    if (media >= 6) {
-        resultado.innerHTML += " parabéns, você foi APROVADO";
-    } else if (media <= 5) {
-        resultado.innerHTML += " parabéns, você foi REPROVADO";
-    } else {
-        resultado.innerHTML += " parabéns, você está de RECUPERAÇÃO";
-    }
-</script>
-
-<style>
-  .mensagem {
-    font-size: 24px;
-    font-weight: bold;
-    color: red;
-  }
-</style>
+</body>
+</html>
